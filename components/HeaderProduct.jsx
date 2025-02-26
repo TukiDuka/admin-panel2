@@ -1,3 +1,4 @@
+// Header.js
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
@@ -23,7 +24,7 @@ export default function Header({ onSearch }) {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim() && onSearch) {
-      onSearch(searchQuery);
+      onSearch(searchQuery); // Хайлтын утгыг эцэг компонент руу дамжуулна
     }
   };
 

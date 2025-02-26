@@ -1,3 +1,4 @@
+// ProductTable.js
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -26,20 +27,40 @@ const ProductTable = () => {
     }
   };
 
+  const handleAddCategory = () => {
+    navigate("/add-category");
+  };
+
+  // НЭМЭГДСЭН: Add Product функц
+  const handleAddProduct = () => {
+    navigate("/add-product");
+  };
+
   return (
     <div className="bg-white rounded-xl shadow-sm p-6 mb-8 border border-gray-100">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-xl font-semibold text-gray-800 tracking-tight">
           Product Details
         </h1>
-        {!isAllProductsPage && (
-          <button
+        <div className="flex space-x-4">
+        <button
             className="text-teal-600 hover:text-teal-800 flex items-center text-sm font-medium transition-colors duration-200"
-            onClick={handleViewAll}
+            onClick={handleAddProduct}
           >
-            <i className="fas fa-eye mr-2"></i> View All
+            <i className="fas fa-plus mr-2"></i> Add Product
           </button>
-        )}
+          {!isAllProductsPage && (
+            <button
+              className="text-teal-600 hover:text-teal-800 flex items-center text-sm font-medium transition-colors duration-200"
+              onClick={handleViewAll}
+            >
+              <i className="fas fa-eye mr-2"></i> View All
+            </button>
+          )}
+          
+          {/* НЭМЭГДСЭН: Add Product товч */}
+          
+        </div>
       </div>
 
       <div className="overflow-x-auto">

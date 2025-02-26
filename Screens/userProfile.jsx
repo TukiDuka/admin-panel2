@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
+import Sidebar from "../components/Sidebar";
 const ProfilePage = () => {
   const { username } = useParams();
 
@@ -28,7 +28,9 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12">
+    <div>
+      <Sidebar/>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 ml-80 mt-10">
       <div className="max-w-5xl mx-auto px-6">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           {/* Header Section */}
@@ -38,7 +40,7 @@ const ProfilePage = () => {
                 <img
                   alt={`Profile picture of ${username}`}
                   className="w-24 h-24 rounded-full border-4 border-white shadow-lg mr-6"
-                  src="https://storage.googleapis.com/a1aa/image/4Kkeg1w6AduM-gBjujO2AiDwWxpodFNYJjBLdfch6S8.jpg"
+                  src="https://scontent.fuln5-1.fna.fbcdn.net/v/t1.6435-1/96909814_167526811394681_2262715696406331392_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=0AcXzIq_lS0Q7kNvgFxkkB4&_nc_oc=Adhz7qhuG6fUp-IUUHRu2hHb1Yw1FT9JBsKWf4EWkCwVPpjfGsaE-Gq2wIEwQ7xoIhQ&_nc_zt=24&_nc_ht=scontent.fuln5-1.fna&_nc_gid=AtJHgPx96yF2yg5YtDmXoOc&oh=00_AYDmnapcdTte14RZ037JTQiJmDSVjkqRXljNfmwgJcDwbw&oe=67E33DDE"
                 />
                 <div>
                   <h2 className="text-3xl font-bold text-white">{username}</h2>
@@ -127,6 +129,7 @@ const ProfilePage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

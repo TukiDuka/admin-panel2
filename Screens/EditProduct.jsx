@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 
 const ProductEditPage = () => {
   const { productId } = useParams(); // Get the product ID from the URL
@@ -65,7 +66,9 @@ const ProductEditPage = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div>
+      <Sidebar/>
+    <div className="bg-gray-100 min-h-screen pl-70 pt-7">
       <div className="max-w-6xl mx-auto p-6">
         <div className="bg-white shadow-xl rounded-xl overflow-hidden">
           {/* Header Section */}
@@ -201,6 +204,7 @@ const ProductEditPage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

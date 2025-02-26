@@ -12,8 +12,10 @@ import EditProduct from '../Screens/EditProduct';
 import CategoryAdd from '../Screens/CategoryAdd';
 import CategoryEdit from '../Screens/CategoryEdit';
 import Allcompany from '../Screens/Allcompany';
-import AddCompany from '../Screens/AddCompany';
+import AddCompany from '../Screens/Addcompany';
 import EditCompany from '../Screens/EditCompany';
+import AddProduct from '../Screens/AddProduct';
+
 
 
 
@@ -21,6 +23,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
+    <Route path="/add-product" element={<AddProduct />} />
     <Route path="/companies/edit/1" element={<EditCompany />} />
     <Route path="/companies/add" element={<AddCompany />} />
     <Route path="/companies" element={<Allcompany />} />

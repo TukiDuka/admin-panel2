@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 
 const CategoryEditPage = () => {
   const { categoryId } = useParams(); // Get the category ID from the URL
@@ -42,7 +43,9 @@ const CategoryEditPage = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div>
+      <Sidebar/>
+    <div className="bg-gray-100 min-h-screen ml-60 pt-30">
       <div className="max-w-4xl mx-auto p-6">
         <div className="bg-white shadow-xl rounded-xl overflow-hidden">
           {/* Header Section */}
@@ -120,6 +123,7 @@ const CategoryEditPage = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

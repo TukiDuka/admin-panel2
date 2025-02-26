@@ -8,20 +8,20 @@ import {
   FaBuilding,
   FaUserShield,
 } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom"; // useLocation нэмж байна
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
-  const location = useLocation(); // Одоогийн байршлыг авах
+  const location = useLocation();
 
   return (
-    <div className="bg-gray-900 text-gray-100 w-64 min-h-[1795px] flex flex-col shadow-lg">
+    <div className="bg-gray-900 text-gray-100 w-64 h-screen fixed top-0 left-0 flex flex-col shadow-lg">
       {/* Header */}
       <div className="text-2xl font-semibold text-white text-center py-6 bg-gradient-to-r from-gray-800 to-gray-900 border-b border-gray-800">
         Admin Panel
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 mt-4">
+      <nav className="flex-1 mt-4 overflow-y-auto"> {/* Scroll хийхийг зөвшөөрнө */}
         <Link
           to="/"
           className={`block py-3 px-6 text-sm font-medium transition-colors duration-200 hover:bg-gray-800 hover:text-white ${
